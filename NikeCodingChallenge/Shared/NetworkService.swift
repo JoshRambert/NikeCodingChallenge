@@ -11,7 +11,7 @@ import Foundation
 class NetworkService {
     
     struct Constant {
-        static let iTunesUrl = "https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/all/10/explicit.json"
+        static let iTunesUrl = "https://rss.itunes.apple.com/api/v1/us/apple-music/top-albums/all/25/explicit.json"
         static let feed = "feed"
         static let results = "results"
     }

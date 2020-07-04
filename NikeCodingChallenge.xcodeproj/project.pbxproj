@@ -22,6 +22,8 @@
 		83EE997924AFCECE000EDCE5 /* HomeControllerCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE997824AFCECE000EDCE5 /* HomeControllerCells.swift */; };
 		83EE997B24AFD159000EDCE5 /* UIImageView+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE997A24AFD159000EDCE5 /* UIImageView+LoadImage.swift */; };
 		83EE997D24AFD3F7000EDCE5 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE997C24AFD3F7000EDCE5 /* Genre.swift */; };
+		83EE997F24AFEAAA000EDCE5 /* UIView+Pinning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE997E24AFEAAA000EDCE5 /* UIView+Pinning.swift */; };
+		83EE998224B05511000EDCE5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE998124B05511000EDCE5 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		83EE997824AFCECE000EDCE5 /* HomeControllerCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerCells.swift; sourceTree = "<group>"; };
 		83EE997A24AFD159000EDCE5 /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
 		83EE997C24AFD3F7000EDCE5 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		83EE997E24AFEAAA000EDCE5 /* UIView+Pinning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Pinning.swift"; sourceTree = "<group>"; };
+		83EE998124B05511000EDCE5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,9 +158,9 @@
 		83EE995B24AE58FF000EDCE5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				83EE995924AE5429000EDCE5 /* HomeController.swift */,
+				83EE998024B054CA000EDCE5 /* Home */,
 				83EE995724AE53F7000EDCE5 /* ContainerController.swift */,
-				83EE997824AFCECE000EDCE5 /* HomeControllerCells.swift */,
+				83EE998124B05511000EDCE5 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,8 +181,18 @@
 				83EE996E24AE763E000EDCE5 /* Strings+Helper.swift */,
 				83EE997224AE80E2000EDCE5 /* Notifications+Helper.swift */,
 				83EE997A24AFD159000EDCE5 /* UIImageView+LoadImage.swift */,
+				83EE997E24AFEAAA000EDCE5 /* UIView+Pinning.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		83EE998024B054CA000EDCE5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				83EE995924AE5429000EDCE5 /* HomeController.swift */,
+				83EE997824AFCECE000EDCE5 /* HomeControllerCells.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,8 +325,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83EE998224B05511000EDCE5 /* DetailViewController.swift in Sources */,
 				83EE996824AE6FC8000EDCE5 /* SceneDelegate.swift in Sources */,
 				83EE997324AE80E2000EDCE5 /* Notifications+Helper.swift in Sources */,
+				83EE997F24AFEAAA000EDCE5 /* UIView+Pinning.swift in Sources */,
 				83EE995824AE53F7000EDCE5 /* ContainerController.swift in Sources */,
 				83EE997724AFC91C000EDCE5 /* AppDelegate.swift in Sources */,
 				83EE997D24AFD3F7000EDCE5 /* Genre.swift in Sources */,

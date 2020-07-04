@@ -13,30 +13,34 @@ class HomeControllerCells: UITableViewCell {
     
     // MARK: - Init
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupCell()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Properties
     
     var artistNameLabel: UILabel = {
         let tl = UILabel()
-        tl.textColor = .darkText
+        tl.textColor = .lightGray
         tl.translatesAutoresizingMaskIntoConstraints = false
         tl.font = UIFont.systemFont(ofSize: 13, weight: .bold)
-        tl.heightAnchor.constraint(equalToConstant: 15).isActive = true
+        tl.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
         return tl
     }()
     
     var albumNameLabel: UILabel = {
         let tl = UILabel()
-        tl.textColor = .lightGray
+        tl.textColor = .darkText
         tl.translatesAutoresizingMaskIntoConstraints = false
-        tl.font = UIFont.systemFont(ofSize: 10, weight: .medium)
-        tl.heightAnchor.constraint(equalToConstant: 15).isActive = true
+        tl.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        tl.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
         return tl
     }()
@@ -66,12 +70,12 @@ class HomeControllerCells: UITableViewCell {
         self.addSubview(albumNameLabel)
         
         albumNameLabel.leftAnchor.constraint(equalTo: albumArt.rightAnchor, constant: 8).isActive = true
-        albumNameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive = true
+        albumNameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 23).isActive = true
         albumNameLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
         
         self.addSubview(artistNameLabel)
         
-        artistNameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+        artistNameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -23).isActive = true
         artistNameLabel.leftAnchor.constraint(equalTo: albumArt.rightAnchor, constant: 8).isActive = true
         artistNameLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
         

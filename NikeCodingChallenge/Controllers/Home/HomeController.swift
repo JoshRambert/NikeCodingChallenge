@@ -17,7 +17,6 @@ class HomeController: UIViewController {
     
     let tableView: UITableView = {
         let tv = UITableView()
-        tv.translatesAutoresizingMaskIntoConstraints = false
         tv.backgroundColor = .white
         
         return tv
@@ -42,17 +41,14 @@ class HomeController: UIViewController {
         delegate.networkService.retrieveTopAlbums()
         view.addSubview(tableView)
         
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.pin(to: self.view)
         
-        tableView.register(HomeControllerCells.self, forCellReuseIdentifier: "HomeCells")
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 70
+        tableView.rowHeight = 90
+        tableView.register(HomeControllerCells.self, forCellReuseIdentifier: "HomeCells")
         
-        navigationController?.navigationBar.barTintColor = .opaqueSeparator
+        navigationController?.navigationBar.barTintColor = UIColor.opaqueSeparator.withAlphaComponent(0)
         navigationItem.title = "Top Albums on iTunes"
     }
     
@@ -92,8 +88,16 @@ extension HomeController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCells", for: indexPath) as! HomeControllerCells
-
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let album = delegate.networkService.albums[indexPath.row]
+        
+        let vc = DetailViewController()
+        vc.album = album
+        vc.setupInfo(forAlbum: album)
+        navigationController?.pushViewController(vc, animated: true)
         //Go to the details page
     }
 }

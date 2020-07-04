@@ -13,7 +13,7 @@ extension UIImageView {
     
     static let imageCache = NSCache<NSString, UIImage>()
     
-    func loadImage(fromUrl url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
+    func loadImage(fromUrl url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFill) {
         
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in

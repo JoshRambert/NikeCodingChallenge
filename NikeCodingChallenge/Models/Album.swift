@@ -26,6 +26,7 @@ struct Album {
         self.albumArt = dictionary[Keys.albumArt] as? String
         self.releaseDate = dictionary[Keys.releaseDate] as? String
         self.url = dictionary[Keys.url] as? String
+        self.copyrightInfo = dictionary[Keys.copyrightInfo] as? String
         
         self.genre = Genre(dictionary: (dictionary[Keys.genres] as? [[String: Any]])?.first ?? [:])
     }
@@ -36,4 +37,5 @@ struct Album {
     let releaseDate: String?
     let genre: Genre?
     let url: String?
+    let copyrightInfo: String?
 }
