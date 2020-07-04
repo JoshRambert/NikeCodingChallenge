@@ -120,6 +120,13 @@ class DetailViewController: UIViewController {
     }
     
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        background.image = nil
+    }
+    
+    
     // MARK: - Handlers
     
     func setupView() {
@@ -214,7 +221,8 @@ class DetailViewController: UIViewController {
             let urlString = self.album?.url,
             let url = URL(string: urlString) else { return }
         
-        UIApplication.shared.open(url)
+        let webView = WebView()
+        webView.url = url
+        presentPageSheet(webView)
     }
-    
 }

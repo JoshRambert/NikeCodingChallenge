@@ -24,6 +24,8 @@
 		83EE997D24AFD3F7000EDCE5 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE997C24AFD3F7000EDCE5 /* Genre.swift */; };
 		83EE997F24AFEAAA000EDCE5 /* UIView+Pinning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE997E24AFEAAA000EDCE5 /* UIView+Pinning.swift */; };
 		83EE998224B05511000EDCE5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE998124B05511000EDCE5 /* DetailViewController.swift */; };
+		83EE998624B07769000EDCE5 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE998524B07769000EDCE5 /* WebView.swift */; };
+		83EE998824B07920000EDCE5 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE998724B07920000EDCE5 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		83EE997C24AFD3F7000EDCE5 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		83EE997E24AFEAAA000EDCE5 /* UIView+Pinning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Pinning.swift"; sourceTree = "<group>"; };
 		83EE998124B05511000EDCE5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		83EE998524B07769000EDCE5 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		83EE998724B07920000EDCE5 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 				83EE998024B054CA000EDCE5 /* Home */,
 				83EE995724AE53F7000EDCE5 /* ContainerController.swift */,
 				83EE998124B05511000EDCE5 /* DetailViewController.swift */,
+				83EE998524B07769000EDCE5 /* WebView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				83EE997224AE80E2000EDCE5 /* Notifications+Helper.swift */,
 				83EE997A24AFD159000EDCE5 /* UIImageView+LoadImage.swift */,
 				83EE997E24AFEAAA000EDCE5 /* UIView+Pinning.swift */,
+				83EE998724B07920000EDCE5 /* UIViewController+Ext.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -327,6 +333,7 @@
 			files = (
 				83EE998224B05511000EDCE5 /* DetailViewController.swift in Sources */,
 				83EE996824AE6FC8000EDCE5 /* SceneDelegate.swift in Sources */,
+				83EE998824B07920000EDCE5 /* UIViewController+Ext.swift in Sources */,
 				83EE997324AE80E2000EDCE5 /* Notifications+Helper.swift in Sources */,
 				83EE997F24AFEAAA000EDCE5 /* UIView+Pinning.swift in Sources */,
 				83EE995824AE53F7000EDCE5 /* ContainerController.swift in Sources */,
@@ -338,6 +345,7 @@
 				83EE996D24AE71BC000EDCE5 /* NetworkService.swift in Sources */,
 				83EE997B24AFD159000EDCE5 /* UIImageView+LoadImage.swift in Sources */,
 				83EE995F24AE6E03000EDCE5 /* Album.swift in Sources */,
+				83EE998624B07769000EDCE5 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
