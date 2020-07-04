@@ -18,6 +18,8 @@ class NetworkService {
     
     public var albums = [Album]()
     
+    // Parse the data retrieved from the JSON content
+    
     private func parse(jsonData: Data) {
         
         do {
@@ -31,16 +33,17 @@ class NetworkService {
                     let album = Album(dictionary: result)
                     albums.append(album)
                     
-                    print(album.name ?? "", album.genre?.name ?? "")
                 }
                 
             }
             
         } catch let error as NSError {
-            print("Failed to load: \(error.localizedDescription)")
+            debugPrint("Failed to load: \(error.localizedDescription)")
         }
         
     }
+    
+    // Load the JSON Content from the chosen URL
     
     private func loadJSON(fromURlString urlString: String, completion: @escaping (Result<Data, Error>) -> Void) {
         
@@ -60,6 +63,8 @@ class NetworkService {
         urlSession.resume()
     }
     
+    // A non private function that can be accessed by the ViewControllers
+    
     func retrieveTopAlbums() {
         
         self.loadJSON(fromURlString: Constant.iTunesUrl) { (result) in
@@ -67,6 +72,9 @@ class NetworkService {
             switch result {
             case .success(let data):
                 self.parse(jsonData: data)
+                
+                // Trigger a notification that can be observed by the ViewControllers
+                
                 NotificationCenter.default.post(name: .retrievedAlbums, object: nil)
 
             case .failure(let error):

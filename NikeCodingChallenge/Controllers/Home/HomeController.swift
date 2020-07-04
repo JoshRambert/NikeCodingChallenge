@@ -24,6 +24,8 @@ class HomeController: UIViewController {
 
     // MARK: - Init
     
+    // Remove the observers once the class has been deinitialized
+    
     deinit {
         NotificationCenter.default.removeObserver(self, name: .retrievedAlbums, object: nil)
     }
@@ -31,14 +33,24 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Hit the endpoint to retrieve the data for the tableView
+
+        delegate.networkService.retrieveTopAlbums()
+
         setupView()
         registerObservers()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     // MARK: - Handlers
     
     func setupView() {
-        delegate.networkService.retrieveTopAlbums()
+                
         view.addSubview(tableView)
         
         tableView.pin(to: self.view)
@@ -49,8 +61,17 @@ class HomeController: UIViewController {
         tableView.register(HomeControllerCells.self, forCellReuseIdentifier: "HomeCells")
         
         navigationController?.navigationBar.barTintColor = UIColor.opaqueSeparator.withAlphaComponent(0)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.backgroundColor = UIColor.clear
+        navigationController?.navigationBar.barStyle = .default
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
         navigationItem.title = "Top Albums on iTunes"
     }
+    
+    // Observe the notification for the album data
     
     func registerObservers() {
         NotificationCenter.default.addObserver(self,
@@ -89,7 +110,6 @@ extension HomeController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCells", for: indexPath) as! HomeControllerCells
         tableView.deselectRow(at: indexPath, animated: true)
         
         let album = delegate.networkService.albums[indexPath.row]
@@ -98,6 +118,5 @@ extension HomeController: UITableViewDataSource, UITableViewDelegate {
         vc.album = album
         vc.setupInfo(forAlbum: album)
         navigationController?.pushViewController(vc, animated: true)
-        //Go to the details page
     }
 }

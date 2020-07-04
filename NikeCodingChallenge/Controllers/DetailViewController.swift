@@ -13,10 +13,21 @@ class DetailViewController: UIViewController {
     
     // MARK: - Properties
     
+    var background: UIImageView = {
+        let iv = UIImageView()
+        
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        iv.addSubview(blurEffectView)
+        blurEffectView.pin(to: iv)
+        
+        return iv
+    }()
+    
     var artistNameLabel: UILabel = {
         let tl = UILabel()
         tl.numberOfLines = 0
-        tl.textColor = .lightGray
+        tl.textColor = .white
         tl.translatesAutoresizingMaskIntoConstraints = false
         tl.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         tl.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -27,7 +38,7 @@ class DetailViewController: UIViewController {
     var albumNameLabel: UILabel = {
         let tl = UILabel()
         tl.numberOfLines = 0
-        tl.textColor = .darkText
+        tl.textColor = .white
         tl.translatesAutoresizingMaskIntoConstraints = false
         tl.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
         tl.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -48,7 +59,7 @@ class DetailViewController: UIViewController {
     var albumGenreLabel: UILabel = {
         let tl = UILabel()
         tl.numberOfLines = 0
-        tl.textColor = .lightGray
+        tl.textColor = .white
         tl.translatesAutoresizingMaskIntoConstraints = false
         tl.font = UIFont.systemFont(ofSize: 13, weight: .bold)
         tl.heightAnchor.constraint(equalToConstant: 40).isActive = true
@@ -59,7 +70,7 @@ class DetailViewController: UIViewController {
     var releaseDateLabel: UILabel = {
         let tl = UILabel()
         tl.numberOfLines = 0
-        tl.textColor = .lightGray
+        tl.textColor = .white
         tl.translatesAutoresizingMaskIntoConstraints = false
         tl.font = UIFont.systemFont(ofSize: 13, weight: .bold)
         tl.heightAnchor.constraint(equalToConstant: 40).isActive = true
@@ -69,7 +80,7 @@ class DetailViewController: UIViewController {
     
     var copyRightLabel: UILabel = {
         let tl = UILabel()
-        tl.textColor = .lightGray
+        tl.textColor = .white
         tl.numberOfLines = 1
         tl.translatesAutoresizingMaskIntoConstraints = false
         tl.font = UIFont.systemFont(ofSize: 12, weight: .bold)
@@ -82,17 +93,17 @@ class DetailViewController: UIViewController {
         
         let bt = UIButton()
         bt.translatesAutoresizingMaskIntoConstraints = false
-        bt.frame = CGRect(x: 0, y: 0, width: 150, height: 30)
+        bt.frame = CGRect(x: 0, y: 0, width: 200, height: 30)
         bt.setTitle("View Website", for: .normal)
-        bt.setTitleColor(UIColor.systemBlue, for: .normal)
+        bt.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
+        bt.setTitleColor(UIColor.white, for: .normal)
         bt.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        bt.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        bt.widthAnchor.constraint(equalToConstant: 200).isActive = true
         
         return bt
     }()
     
     var album: Album?
-    
     
     // MARK: - Init
     
@@ -100,16 +111,27 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
-        print(self.album?.name ?? "")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     
     // MARK: - Handlers
     
     func setupView() {
-        
+    
         self.view.backgroundColor = .white
         
+        // Add the properties to the view and set their constraints
+    
+        self.view.addSubview(background)
+        
+        background.pin(to: self.view)
+                
         self.view.addSubview(albumArt)
         
         albumArt.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -155,6 +177,14 @@ class DetailViewController: UIViewController {
         urlButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
         urlButton.addTarget(self, action: #selector(toWebsite), for: .touchDown)
         
+        // NavigationBar setup
+        
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.barStyle = .default
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     func setupInfo(forAlbum album: Album) {
@@ -170,17 +200,21 @@ class DetailViewController: UIViewController {
             else { return }
             
         albumArt.loadImage(fromUrl: url)
+        background.loadImage(fromUrl: url)
         albumNameLabel.text = "Name:\n\(albumName)"
         artistNameLabel.text = "Artist:\n\(artistName)"
         albumGenreLabel.text = "Genre:\n\(albumGenre)"
-        releaseDateLabel.text = "Release Data:\n\(releaseDate)"
+        releaseDateLabel.text = "Release Date:\n\(releaseDate)"
         copyRightLabel.text = copyRight
     }
     
     @objc func toWebsite() {
         
-        //Kick them out and take them to safari
-        print("TO THE INTERWEBS \(album?.url)")
+        guard
+            let urlString = self.album?.url,
+            let url = URL(string: urlString) else { return }
+        
+        UIApplication.shared.open(url)
     }
     
 }

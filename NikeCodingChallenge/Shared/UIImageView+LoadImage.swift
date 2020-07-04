@@ -9,9 +9,13 @@
 import Foundation
 import UIKit
 
+
+
 extension UIImageView {
     
     static let imageCache = NSCache<NSString, UIImage>()
+    
+    // Load an image from a URL and save it to the cache -- if the image is already stored in cache, retrieve that image
     
     func loadImage(fromUrl url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFill) {
         

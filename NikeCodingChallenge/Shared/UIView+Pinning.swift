@@ -11,6 +11,8 @@ import UIKit
 
 extension UIView {
     
+    // Bound a view to a Super View
+    
     func pin(to view: UIView) {
         
         self.translatesAutoresizingMaskIntoConstraints = false

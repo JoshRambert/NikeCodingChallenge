@@ -19,6 +19,8 @@ class ContainerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Embed the HomeController into the ContainerController
+        
         configureHomeController()
     }
     
