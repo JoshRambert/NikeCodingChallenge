@@ -17,6 +17,19 @@ class WebView: UIViewController {
     var webKit = WKWebView()
     var url: URL?
     
+    var closeButton: UIButton = {
+        
+        let bt = UIButton()
+        bt.translatesAutoresizingMaskIntoConstraints = false
+        bt.frame = CGRect(x: 0, y: 0, width: 200, height: 30)
+        bt.setTitle("Close", for: .normal)
+        bt.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
+        bt.setTitleColor(UIColor.black, for: .normal)
+        bt.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        bt.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        return bt
+    }()
     
     // MARK: - Init
     
@@ -38,7 +51,15 @@ class WebView: UIViewController {
         let request = URLRequest(url: url)
         webKit.load(request)
         
-        print("YES")
+        self.view.addSubview(closeButton)
+        
+        closeButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        closeButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
+    }
+    
+    @objc func close() {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
