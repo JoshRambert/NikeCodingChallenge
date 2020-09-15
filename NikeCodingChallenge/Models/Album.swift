@@ -8,7 +8,25 @@
 
 import Foundation
 
-struct Album {
+struct Album: Codable {
+    
+    var name: String
+    var artistName: String
+    var albumArt: String
+    var releaseDate: String
+    var genres: Genres
+    var url: String
+    var copyrightInfo: String
+    
+    public enum CodingKeys: String, CodingKey {
+        case name
+        case artistName
+        case albumArt = "artworkUrl100"
+        case releaseDate
+        case genres
+        case copyrightInfo = "copyright"
+        case url
+    }
     
     struct Keys {
         static let name = "name"
@@ -20,22 +38,54 @@ struct Album {
         static let url = "url"
     }
     
-    init(dictionary: [String: Any]) {
-        self.name = dictionary[Keys.name] as? String
-        self.artistName = dictionary[Keys.artistName] as? String
-        self.albumArt = dictionary[Keys.albumArt] as? String
-        self.releaseDate = dictionary[Keys.releaseDate] as? String
-        self.url = dictionary[Keys.url] as? String
-        self.copyrightInfo = dictionary[Keys.copyrightInfo] as? String
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
         
-        self.genre = Genre(dictionary: (dictionary[Keys.genres] as? [[String: Any]])?.first ?? [:])
+        name = try values.decode(String.self, forKey: .name)
+        artistName = try values.decode(String.self, forKey: .artistName)
+        albumArt = try values.decode(String.self, forKey: .albumArt)
+        releaseDate = try values.decode(String.self, forKey: .releaseDate)
+        genres = try values.decode(Genres.self, forKey: .genres)
+        copyrightInfo = try values.decode(String.self, forKey: .copyrightInfo)
+        url = try values.decode(String.self, forKey: .url)
     }
     
-    let name: String?
-    let artistName: String?
-    let albumArt: String?
-    let releaseDate: String?
-    let genre: Genre?
-    let url: String?
-    let copyrightInfo: String?
+    init(name: String,
+         artistName: String,
+         albumArt: String,
+         releaseDate: String,
+         url: String,
+         copyright: String,
+         genres: Genres) {
+        
+        self.name = name
+        self.artistName = artistName
+        self.albumArt = albumArt
+        self.releaseDate = releaseDate
+        self.url = url
+        self.copyrightInfo = copyright
+        self.genres = genres
+    }
+
+}
+
+struct Albums: Codable {
+    
+    let albums: [Album]
+    
+    public enum CodingKeys: String, CodingKey {
+        case albums
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        
+        albums = try values.decode(Array<Album>.self, forKey: .albums)
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(albums, forKey: .albums)
+    }
+    
 }

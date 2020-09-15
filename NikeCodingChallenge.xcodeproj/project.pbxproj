@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831553AB250C031100EADE84 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553AA250C031100EADE84 /* HTTPError.swift */; };
+		831553AD250C0BA300EADE84 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553AC250C0BA300EADE84 /* HTTPMethod.swift */; };
+		831553AF250C0C4500EADE84 /* HTTPResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553AE250C0C4500EADE84 /* HTTPResult.swift */; };
+		831553B1250D53EB00EADE84 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553B0250D53EB00EADE84 /* HTTPResponse.swift */; };
+		831553B3250D545D00EADE84 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553B2250D545D00EADE84 /* ParameterEncoding.swift */; };
+		831553B5250D54B900EADE84 /* SecCertificate+PinnedCertificates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553B4250D54B900EADE84 /* SecCertificate+PinnedCertificates.swift */; };
+		831553B7250D55D300EADE84 /* URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553B6250D55D300EADE84 /* URLRequestConvertible.swift */; };
+		831553B9250D5DFD00EADE84 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553B8250D5DFD00EADE84 /* SessionManager.swift */; };
+		831553BB250E148600EADE84 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553BA250E148600EADE84 /* HTTPRequest.swift */; };
+		831553BD250E15AF00EADE84 /* HTTPProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553BC250E15AF00EADE84 /* HTTPProviderProtocol.swift */; };
+		831553BF250E1BAE00EADE84 /* HTTPProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553BE250E1BAE00EADE84 /* HTTPProvider.swift */; };
+		831553C1250E1C2E00EADE84 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553C0250E1C2E00EADE84 /* Endpoint.swift */; };
+		831553C3250E1D9B00EADE84 /* HTTPNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553C2250E1D9B00EADE84 /* HTTPNetworkClient.swift */; };
 		83EE992D24AE46FF000EDCE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EE992C24AE46FF000EDCE5 /* Assets.xcassets */; };
 		83EE993024AE46FF000EDCE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EE992E24AE46FF000EDCE5 /* LaunchScreen.storyboard */; };
 		83EE993B24AE46FF000EDCE5 /* NikeCodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE993A24AE46FF000EDCE5 /* NikeCodingChallengeTests.swift */; };
@@ -46,6 +59,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		831553AA250C031100EADE84 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		831553AC250C0BA300EADE84 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		831553AE250C0C4500EADE84 /* HTTPResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResult.swift; sourceTree = "<group>"; };
+		831553B0250D53EB00EADE84 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
+		831553B2250D545D00EADE84 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		831553B4250D54B900EADE84 /* SecCertificate+PinnedCertificates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecCertificate+PinnedCertificates.swift"; sourceTree = "<group>"; };
+		831553B6250D55D300EADE84 /* URLRequestConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestConvertible.swift; sourceTree = "<group>"; };
+		831553B8250D5DFD00EADE84 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		831553BA250E148600EADE84 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		831553BC250E15AF00EADE84 /* HTTPProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPProviderProtocol.swift; sourceTree = "<group>"; };
+		831553BE250E1BAE00EADE84 /* HTTPProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPProvider.swift; sourceTree = "<group>"; };
+		831553C0250E1C2E00EADE84 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		831553C2250E1D9B00EADE84 /* HTTPNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkClient.swift; sourceTree = "<group>"; };
 		83EE992024AE46FA000EDCE5 /* NikeCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikeCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EE992C24AE46FF000EDCE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83EE992F24AE46FF000EDCE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +124,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		831553A8250C02EE00EADE84 /* RESTNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				831553C0250E1C2E00EADE84 /* Endpoint.swift */,
+				831553B8250D5DFD00EADE84 /* SessionManager.swift */,
+				831553B6250D55D300EADE84 /* URLRequestConvertible.swift */,
+				831553B4250D54B900EADE84 /* SecCertificate+PinnedCertificates.swift */,
+				831553A9250C02FF00EADE84 /* HTTP */,
+			);
+			path = RESTNetworking;
+			sourceTree = "<group>";
+		};
+		831553A9250C02FF00EADE84 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				831553AA250C031100EADE84 /* HTTPError.swift */,
+				831553AC250C0BA300EADE84 /* HTTPMethod.swift */,
+				831553BA250E148600EADE84 /* HTTPRequest.swift */,
+				831553B0250D53EB00EADE84 /* HTTPResponse.swift */,
+				831553AE250C0C4500EADE84 /* HTTPResult.swift */,
+				831553B2250D545D00EADE84 /* ParameterEncoding.swift */,
+				831553BC250E15AF00EADE84 /* HTTPProviderProtocol.swift */,
+				831553BE250E1BAE00EADE84 /* HTTPProvider.swift */,
+				831553C2250E1D9B00EADE84 /* HTTPNetworkClient.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
 		83EE991724AE46FA000EDCE5 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +236,7 @@
 		83EE996B24AE71AC000EDCE5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				831553A8250C02EE00EADE84 /* RESTNetworking */,
 				83EE996C24AE71BC000EDCE5 /* NetworkService.swift */,
 				83EE996E24AE763E000EDCE5 /* Strings+Helper.swift */,
 				83EE997224AE80E2000EDCE5 /* Notifications+Helper.swift */,
@@ -331,19 +386,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831553B5250D54B900EADE84 /* SecCertificate+PinnedCertificates.swift in Sources */,
+				831553C1250E1C2E00EADE84 /* Endpoint.swift in Sources */,
+				831553B9250D5DFD00EADE84 /* SessionManager.swift in Sources */,
 				83EE998224B05511000EDCE5 /* DetailViewController.swift in Sources */,
 				83EE996824AE6FC8000EDCE5 /* SceneDelegate.swift in Sources */,
 				83EE998824B07920000EDCE5 /* UIViewController+Ext.swift in Sources */,
 				83EE997324AE80E2000EDCE5 /* Notifications+Helper.swift in Sources */,
+				831553BF250E1BAE00EADE84 /* HTTPProvider.swift in Sources */,
+				831553AB250C031100EADE84 /* HTTPError.swift in Sources */,
+				831553B3250D545D00EADE84 /* ParameterEncoding.swift in Sources */,
+				831553B7250D55D300EADE84 /* URLRequestConvertible.swift in Sources */,
+				831553C3250E1D9B00EADE84 /* HTTPNetworkClient.swift in Sources */,
 				83EE997F24AFEAAA000EDCE5 /* UIView+Pinning.swift in Sources */,
+				831553AF250C0C4500EADE84 /* HTTPResult.swift in Sources */,
 				83EE995824AE53F7000EDCE5 /* ContainerController.swift in Sources */,
 				83EE997724AFC91C000EDCE5 /* AppDelegate.swift in Sources */,
 				83EE997D24AFD3F7000EDCE5 /* Genre.swift in Sources */,
 				83EE997924AFCECE000EDCE5 /* HomeControllerCells.swift in Sources */,
 				83EE996F24AE763E000EDCE5 /* Strings+Helper.swift in Sources */,
+				831553B1250D53EB00EADE84 /* HTTPResponse.swift in Sources */,
 				83EE995A24AE5429000EDCE5 /* HomeController.swift in Sources */,
+				831553AD250C0BA300EADE84 /* HTTPMethod.swift in Sources */,
+				831553BD250E15AF00EADE84 /* HTTPProviderProtocol.swift in Sources */,
 				83EE996D24AE71BC000EDCE5 /* NetworkService.swift in Sources */,
 				83EE997B24AFD159000EDCE5 /* UIImageView+LoadImage.swift in Sources */,
+				831553BB250E148600EADE84 /* HTTPRequest.swift in Sources */,
 				83EE995F24AE6E03000EDCE5 /* Album.swift in Sources */,
 				83EE998624B07769000EDCE5 /* WebView.swift in Sources */,
 			);
