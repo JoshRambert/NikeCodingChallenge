@@ -10,15 +10,15 @@ import Foundation
 
 public struct Endpoint {
     
-    let path: String
+    public let path: String
     
-    let method: HTTPMethod
+    public let method: HTTPMethod
     
-    let encoding: ParameterEncodingProtocol
+    public let encoding: ParameterEncodingProtocol
     
-    let parameters: [String: Any]?
+    public let parameters: [String: Any]?
     
-    let headers: [String: String]?
+    public let headers: [String: String]?
     
     public init(path: String, method: HTTPMethod = .get, encoding: ParameterEncodingProtocol, parameters: [String: Any]?, headers: [String: String]? = nil) {
         self.path = path

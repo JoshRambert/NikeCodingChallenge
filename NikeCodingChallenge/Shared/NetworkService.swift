@@ -30,8 +30,8 @@ class NetworkService {
                 
                 for result in results {
                     
-                    let album = Album(dictionary: result)
-                    albums.append(album)
+//                    let album = Album(dictionary: result)
+//                    albums.append(album)
                     
                 }
                 

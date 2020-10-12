@@ -86,11 +86,11 @@ class HomeControllerCells: UITableViewCell {
         artistNameLabel.text = album.artistName
         albumNameLabel.text = album.name
         
-        guard
-            let urlString = album.albumArt,
-            let url = URL(string: urlString) else { return }
+//        guard
+//            let urlString = album.albumArt,
+//            let url = URL(string: urlString) else { return }
         
-        albumArt.loadImage(fromUrl: url)
+        //albumArt.loadImage(fromUrl: url)
     }
     
     override var reuseIdentifier: String? {

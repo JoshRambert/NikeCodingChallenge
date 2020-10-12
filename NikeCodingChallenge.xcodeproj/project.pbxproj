@@ -20,9 +20,15 @@
 		831553BF250E1BAE00EADE84 /* HTTPProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553BE250E1BAE00EADE84 /* HTTPProvider.swift */; };
 		831553C1250E1C2E00EADE84 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553C0250E1C2E00EADE84 /* Endpoint.swift */; };
 		831553C3250E1D9B00EADE84 /* HTTPNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831553C2250E1D9B00EADE84 /* HTTPNetworkClient.swift */; };
+		839F41E3252FBFD30062C307 /* MockAPIRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F41E2252FBFD30062C307 /* MockAPIRoutes.swift */; };
+		839F41EB25318CCF0062C307 /* MockAPIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F41EA25318CCF0062C307 /* MockAPIProvider.swift */; };
+		839F41FD253194B00062C307 /* TestEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F41F82531948F0062C307 /* TestEndpoints.swift */; };
+		839F420F2531B3EA0062C307 /* MockProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F42072531B3D10062C307 /* MockProviders.swift */; };
+		839F42202531B5DE0062C307 /* HTTPRequestSendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F42142531B5A30062C307 /* HTTPRequestSendTests.swift */; };
+		839F422C253421CC0062C307 /* HTTPRequestBuildingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F4224253421A20062C307 /* HTTPRequestBuildingTests.swift */; };
+		839F4231253426F60062C307 /* HTTPProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F4230253426F60062C307 /* HTTPProviderTests.swift */; };
 		83EE992D24AE46FF000EDCE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EE992C24AE46FF000EDCE5 /* Assets.xcassets */; };
 		83EE993024AE46FF000EDCE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EE992E24AE46FF000EDCE5 /* LaunchScreen.storyboard */; };
-		83EE993B24AE46FF000EDCE5 /* NikeCodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE993A24AE46FF000EDCE5 /* NikeCodingChallengeTests.swift */; };
 		83EE994624AE46FF000EDCE5 /* NikeCodingChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE994524AE46FF000EDCE5 /* NikeCodingChallengeUITests.swift */; };
 		83EE995824AE53F7000EDCE5 /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE995724AE53F7000EDCE5 /* ContainerController.swift */; };
 		83EE995A24AE5429000EDCE5 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EE995924AE5429000EDCE5 /* HomeController.swift */; };
@@ -72,12 +78,18 @@
 		831553BE250E1BAE00EADE84 /* HTTPProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPProvider.swift; sourceTree = "<group>"; };
 		831553C0250E1C2E00EADE84 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		831553C2250E1D9B00EADE84 /* HTTPNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkClient.swift; sourceTree = "<group>"; };
+		839F41E2252FBFD30062C307 /* MockAPIRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIRoutes.swift; sourceTree = "<group>"; };
+		839F41EA25318CCF0062C307 /* MockAPIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIProvider.swift; sourceTree = "<group>"; };
+		839F41F82531948F0062C307 /* TestEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEndpoints.swift; sourceTree = "<group>"; };
+		839F42072531B3D10062C307 /* MockProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProviders.swift; sourceTree = "<group>"; };
+		839F42142531B5A30062C307 /* HTTPRequestSendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestSendTests.swift; sourceTree = "<group>"; };
+		839F4224253421A20062C307 /* HTTPRequestBuildingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestBuildingTests.swift; sourceTree = "<group>"; };
+		839F4230253426F60062C307 /* HTTPProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPProviderTests.swift; sourceTree = "<group>"; };
 		83EE992024AE46FA000EDCE5 /* NikeCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikeCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EE992C24AE46FF000EDCE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83EE992F24AE46FF000EDCE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83EE993124AE46FF000EDCE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83EE993624AE46FF000EDCE5 /* NikeCodingChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NikeCodingChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		83EE993A24AE46FF000EDCE5 /* NikeCodingChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NikeCodingChallengeTests.swift; sourceTree = "<group>"; };
 		83EE993C24AE46FF000EDCE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83EE994124AE46FF000EDCE5 /* NikeCodingChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NikeCodingChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EE994524AE46FF000EDCE5 /* NikeCodingChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NikeCodingChallengeUITests.swift; sourceTree = "<group>"; };
@@ -152,11 +164,54 @@
 			path = HTTP;
 			sourceTree = "<group>";
 		};
+		839F41E1252FBFB50062C307 /* MockRESTNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				839F41E2252FBFD30062C307 /* MockAPIRoutes.swift */,
+				839F41EA25318CCF0062C307 /* MockAPIProvider.swift */,
+			);
+			path = MockRESTNetworking;
+			sourceTree = "<group>";
+		};
+		839F41F5253191440062C307 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83EE993C24AE46FF000EDCE5 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		839F41F6253192B30062C307 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				839F42072531B3D10062C307 /* MockProviders.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		839F41F7253194790062C307 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				839F41F82531948F0062C307 /* TestEndpoints.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		839F42132531B56B0062C307 /* HTTPTests */ = {
+			isa = PBXGroup;
+			children = (
+				839F42142531B5A30062C307 /* HTTPRequestSendTests.swift */,
+				839F4224253421A20062C307 /* HTTPRequestBuildingTests.swift */,
+				839F4230253426F60062C307 /* HTTPProviderTests.swift */,
+			);
+			path = HTTPTests;
+			sourceTree = "<group>";
+		};
 		83EE991724AE46FA000EDCE5 = {
 			isa = PBXGroup;
 			children = (
 				83EE992224AE46FA000EDCE5 /* NikeCodingChallenge */,
-				83EE993924AE46FF000EDCE5 /* NikeCodingChallengeTests */,
+				83EE993924AE46FF000EDCE5 /* Tests */,
 				83EE994424AE46FF000EDCE5 /* NikeCodingChallengeUITests */,
 				83EE992124AE46FA000EDCE5 /* Products */,
 			);
@@ -186,13 +241,15 @@
 			path = NikeCodingChallenge;
 			sourceTree = "<group>";
 		};
-		83EE993924AE46FF000EDCE5 /* NikeCodingChallengeTests */ = {
+		83EE993924AE46FF000EDCE5 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				83EE993A24AE46FF000EDCE5 /* NikeCodingChallengeTests.swift */,
-				83EE993C24AE46FF000EDCE5 /* Info.plist */,
+				839F42132531B56B0062C307 /* HTTPTests */,
+				839F41F7253194790062C307 /* Models */,
+				839F41F6253192B30062C307 /* Shared */,
+				839F41F5253191440062C307 /* Supporting Files */,
 			);
-			path = NikeCodingChallengeTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		83EE994424AE46FF000EDCE5 /* NikeCodingChallengeUITests */ = {
@@ -236,6 +293,7 @@
 		83EE996B24AE71AC000EDCE5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				839F41E1252FBFB50062C307 /* MockRESTNetworking */,
 				831553A8250C02EE00EADE84 /* RESTNetworking */,
 				83EE996C24AE71BC000EDCE5 /* NetworkService.swift */,
 				83EE996E24AE763E000EDCE5 /* Strings+Helper.swift */,
@@ -389,7 +447,9 @@
 				831553B5250D54B900EADE84 /* SecCertificate+PinnedCertificates.swift in Sources */,
 				831553C1250E1C2E00EADE84 /* Endpoint.swift in Sources */,
 				831553B9250D5DFD00EADE84 /* SessionManager.swift in Sources */,
+				839F41E3252FBFD30062C307 /* MockAPIRoutes.swift in Sources */,
 				83EE998224B05511000EDCE5 /* DetailViewController.swift in Sources */,
+				839F41EB25318CCF0062C307 /* MockAPIProvider.swift in Sources */,
 				83EE996824AE6FC8000EDCE5 /* SceneDelegate.swift in Sources */,
 				83EE998824B07920000EDCE5 /* UIViewController+Ext.swift in Sources */,
 				83EE997324AE80E2000EDCE5 /* Notifications+Helper.swift in Sources */,
@@ -421,7 +481,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83EE993B24AE46FF000EDCE5 /* NikeCodingChallengeTests.swift in Sources */,
+				839F420F2531B3EA0062C307 /* MockProviders.swift in Sources */,
+				839F42202531B5DE0062C307 /* HTTPRequestSendTests.swift in Sources */,
+				839F4231253426F60062C307 /* HTTPProviderTests.swift in Sources */,
+				839F41FD253194B00062C307 /* TestEndpoints.swift in Sources */,
+				839F422C253421CC0062C307 /* HTTPRequestBuildingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +681,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PN9Z6QQB56;
-				INFOPLIST_FILE = NikeCodingChallengeTests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -639,7 +703,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PN9Z6QQB56;
-				INFOPLIST_FILE = NikeCodingChallengeTests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

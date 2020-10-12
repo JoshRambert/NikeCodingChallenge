@@ -191,23 +191,23 @@ class DetailViewController: UIViewController {
     
     func setupInfo(forAlbum album: Album) {
         
-        guard
-            let urlString = album.albumArt,
-            let url = URL(string: urlString),
-            let albumName = album.name,
-            let artistName = album.artistName,
-            let albumGenre = album.genre?.name,
-            let releaseDate = album.releaseDate,
-            let copyRight = album.copyrightInfo
-            else { return }
+//        guard
+//            let urlString = album.albumArt,
+//            let url = URL(string: urlString),
+//            let albumName = album.name,
+//            let artistName = album.artistName,
+//            let albumGenre = album.genre?.name,
+//            let releaseDate = album.releaseDate,
+//            let copyRight = album.copyrightInfo
+//            else { return }
             
-        albumArt.loadImage(fromUrl: url)
-        background.loadImage(fromUrl: url)
-        albumNameLabel.text = "Name:\n\(albumName)"
-        artistNameLabel.text = "Artist:\n\(artistName)"
-        albumGenreLabel.text = "Genre:\n\(albumGenre)"
-        releaseDateLabel.text = "Release Date:\n\(releaseDate)"
-        copyRightLabel.text = copyRight
+//        albumArt.loadImage(fromUrl: url)
+//        background.loadImage(fromUrl: url)
+//        albumNameLabel.text = "Name:\n\(albumName)"
+//        artistNameLabel.text = "Artist:\n\(artistName)"
+//        albumGenreLabel.text = "Genre:\n\(albumGenre)"
+//        releaseDateLabel.text = "Release Date:\n\(releaseDate)"
+//        copyRightLabel.text = copyRight
     }
     
     @objc func toWebsite() {
