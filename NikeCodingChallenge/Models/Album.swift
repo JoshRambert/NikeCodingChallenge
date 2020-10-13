@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Album: Codable {
+public struct Album: Codable {
     
     var name: String
     var artistName: String
@@ -69,7 +69,7 @@ struct Album: Codable {
 
 }
 
-struct Albums: Codable {
+public struct Albums: Codable {
     
     let albums: [Album]
     
